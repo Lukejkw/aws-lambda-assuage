@@ -1,5 +1,7 @@
 # AWS Lambda Assuage
 
+[![Build and Test](https://github.com/Lukejkw/aws-lambda-assuage/actions/workflows/ci.yml/badge.svg)](https://github.com/Lukejkw/aws-lambda-assuage/actions/workflows/ci.yml)
+
 A super simple lightweight extensible router to take the AWS Lambda routing pain away.
 
 ## Features
