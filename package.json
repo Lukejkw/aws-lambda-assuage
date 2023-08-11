@@ -1,6 +1,6 @@
 {
   "name": "aws-lambda-assuage",
-  "version": "0.0.0",
+  "version": "1.0.0-0",
   "description": "A super simple lightweight extensible router to take the AWS Lambda routing pain away",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
