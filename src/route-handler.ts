@@ -22,6 +22,6 @@ export interface User {
   groups: string[];
 }
 
-export type RouteHandler = (event: APIGatewayProxyEventV2, user?: User) => Promise<RouteHandlerResult>
+export type RouteHandler = (event: APIGatewayProxyEventV2) => Promise<RouteHandlerResult>
   | RouteHandlerResult
   | string;

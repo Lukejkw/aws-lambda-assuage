@@ -5,7 +5,7 @@
     "lib": [
       "es2020"
     ],
-    "outDir": "dist",
+    "outFile": "dist",
     "declaration": true,
     "strict": true,
     "noImplicitAny": true,

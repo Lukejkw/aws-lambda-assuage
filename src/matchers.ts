@@ -1,5 +1,5 @@
 import { APIGatewayProxyEventV2 } from 'aws-lambda';
-import { HttpMethod } from '../http/method';
+import { HttpMethod } from './http/method';
 
 export type Matcher = (proxyEvent: APIGatewayProxyEventV2) => boolean;
 

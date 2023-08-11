@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="22" failures="0" errors="0" time="1.759">
+  <testsuite name="matchEverything" errors="0" failures="0" skipped="0" timestamp="2023-08-11T10:19:44" time="1.186" tests="16">
+    <testcase classname="matchEverything given &apos;8&apos; random method should match" name="matchEverything given &apos;8&apos; random method should match" time="0.005">
+    </testcase>
+    <testcase classname="methodMatcher given &apos;POST&apos; should match" name="methodMatcher given &apos;POST&apos; should match" time="0">
+    </testcase>
+    <testcase classname="methodMatcher given Any (&apos;*&apos;) should match on POST" name="methodMatcher given Any (&apos;*&apos;) should match on POST" time="0">
+    </testcase>
+    <testcase classname="methodMatcher given &apos;GET&apos; should match" name="methodMatcher given &apos;GET&apos; should match" time="0.001">
+    </testcase>
+    <testcase classname="methodMatcher given Any (&apos;*&apos;) should match on GET" name="methodMatcher given Any (&apos;*&apos;) should match on GET" time="0">
+    </testcase>
+    <testcase classname="methodMatcher given &apos;HEAD&apos; should match" name="methodMatcher given &apos;HEAD&apos; should match" time="0">
+    </testcase>
+    <testcase classname="methodMatcher given Any (&apos;*&apos;) should match on HEAD" name="methodMatcher given Any (&apos;*&apos;) should match on HEAD" time="0.001">
+    </testcase>
+    <testcase classname="methodMatcher given &apos;OPTIONS&apos; should match" name="methodMatcher given &apos;OPTIONS&apos; should match" time="0">
+    </testcase>
+    <testcase classname="methodMatcher given Any (&apos;*&apos;) should match on OPTIONS" name="methodMatcher given Any (&apos;*&apos;) should match on OPTIONS" time="0">
+    </testcase>
+    <testcase classname="methodMatcher given &apos;PUT&apos; should match" name="methodMatcher given &apos;PUT&apos; should match" time="0.001">
+    </testcase>
+    <testcase classname="methodMatcher given Any (&apos;*&apos;) should match on PUT" name="methodMatcher given Any (&apos;*&apos;) should match on PUT" time="0">
+    </testcase>
+    <testcase classname="methodMatcher given &apos;PATCH&apos; should match" name="methodMatcher given &apos;PATCH&apos; should match" time="0">
+    </testcase>
+    <testcase classname="methodMatcher given Any (&apos;*&apos;) should match on PATCH" name="methodMatcher given Any (&apos;*&apos;) should match on PATCH" time="0.001">
+    </testcase>
+    <testcase classname="methodMatcher given &apos;DELETE&apos; should match" name="methodMatcher given &apos;DELETE&apos; should match" time="0">
+    </testcase>
+    <testcase classname="methodMatcher given Any (&apos;*&apos;) should match on DELETE" name="methodMatcher given Any (&apos;*&apos;) should match on DELETE" time="0">
+    </testcase>
+    <testcase classname="methodMatcher given non matching method should not match" name="methodMatcher given non matching method should not match" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="router" errors="0" failures="0" skipped="0" timestamp="2023-08-11T10:19:44" time="1.392" tests="6">
+    <testcase classname="router given multiple matching route should match on higher priority route" name="router given multiple matching route should match on higher priority route" time="0.006">
+    </testcase>
+    <testcase classname="router given multiple matching route with one as default should match on higher priority route" name="router given multiple matching route with one as default should match on higher priority route" time="0">
+    </testcase>
+    <testcase classname="router given matching route should produce response from handler" name="router given matching route should produce response from handler" time="0">
+    </testcase>
+    <testcase classname="router given matching route and object body &gt; should serialize body from handler" name="router given matching route and object body &gt; should serialize body from handler" time="0">
+    </testcase>
+    <testcase classname="router given non-matching route should produce 404 response" name="router given non-matching route should produce 404 response" time="0.001">
+    </testcase>
+    <testcase classname="router matching route which throws error should produce internal server error response" name="router matching route which throws error should produce internal server error response" time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>

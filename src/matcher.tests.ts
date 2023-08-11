@@ -1,5 +1,5 @@
 import { APIGatewayProxyEventV2 } from 'aws-lambda';
-import { HttpMethod } from '../http/method';
+import { HttpMethod } from './http/method';
 import { matchEverything, methodMatcher } from './matchers';
 import { randomInt } from 'crypto';
 

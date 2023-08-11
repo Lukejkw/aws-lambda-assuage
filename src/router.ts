@@ -4,7 +4,6 @@ import { HttpStatus } from './http/status';
 import { Matcher } from './matchers';
 import { serialize } from './serializer';
 import { ApiGatewayProxyResult, RouteHandler } from './route-handler';
-import { createUser } from './create-user';
 
 const logger = createLogger('routing');
 
@@ -42,8 +41,7 @@ export const router: Router = routes => {
     }
 
     try {
-      const user = createUser(logger, event);
-      const response = route.handler(event, user);
+      const response = route.handler(event);
       return serialize(response);
     }
     catch (error: unknown) {
