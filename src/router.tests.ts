@@ -1,7 +1,7 @@
 import { APIGatewayProxyEventV2, APIGatewayProxyStructuredResultV2 } from 'aws-lambda';
 import { Route, router } from '.';
 import { matchEverything } from './matchers';
-import { HttpStatus } from './http/status';
+import { HttpStatus } from './http';
 
 jest.mock('./logger', () => ({
   createLogger: () => ({

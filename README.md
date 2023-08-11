@@ -6,9 +6,10 @@ A super simple lightweight extensible router to take the AWS Lambda routing pain
 
 ## Features
 
- - Easy to use
- - Easy to extend
+ - Simple to use
+ - Extensible
  - Tiny
+ - Includes TypeScript types
 
 ## Getting Started
 
