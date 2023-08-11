@@ -1,6 +1,6 @@
 import { APIGatewayProxyEventV2 } from 'aws-lambda';
 import { createLogger } from './logger';
-import { HttpStatus } from './http/status';
+import { HttpStatus } from './http';
 import { Matcher } from './matchers';
 import { serialize } from './serializer';
 import { ApiGatewayProxyResult, RouteHandler } from './route-handler';
@@ -14,10 +14,13 @@ const internalServerErrorMessage = {
   message: 'Unexpected error occurred'
 };
 
-export interface Route {
+type Enricher<TResult> = (event: APIGatewayProxyEventV2) => Promise<TResult> | TResult;
+
+export interface Route<TEnrichmentResult=unknown> {
   priority?: number;
   matcher: Matcher;
   handler: RouteHandler;
+  enricher?: Enricher<TEnrichmentResult>;
 }
 
 type Router = (routes: Route[]) => (event: APIGatewayProxyEventV2) =>
@@ -30,7 +33,7 @@ export const router: Router = routes => {
   const prioritisedRoutes = routes.sort(
     (a, b) => (a.priority || defaultRoutePriority) - (b.priority || defaultRoutePriority));
 
-  return event => {
+  return async event => {
     const route = prioritisedRoutes.find(({ matcher }) => matcher(event));
 
     if (!route) {
@@ -41,7 +44,10 @@ export const router: Router = routes => {
     }
 
     try {
-      const response = route.handler(event);
+      const enrichment = route.enricher
+        ? await route.enricher(event)
+        : undefined;
+      const response = route.handler(event, enrichment);
       return serialize(response);
     }
     catch (error: unknown) {

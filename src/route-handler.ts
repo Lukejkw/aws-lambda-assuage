@@ -22,6 +22,6 @@ export interface User {
   groups: string[];
 }
 
-export type RouteHandler = (event: APIGatewayProxyEventV2) => Promise<RouteHandlerResult>
+export type RouteHandler<TEnrichmentResult=unknown> = (event: APIGatewayProxyEventV2, enrichment?: TEnrichmentResult) => Promise<RouteHandlerResult>
   | RouteHandlerResult
   | string;
