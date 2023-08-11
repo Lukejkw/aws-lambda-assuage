@@ -1,0 +1,26 @@
+{
+  "name": "aws-lambda-assuage",
+  "version": "1.0.0",
+  "description": "A super simple lightweight extensible router to take the AWS Lambda routing pain away",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "router",
+    "typed",
+    "router"
+  ],
+  "author": "Luke Warren (https://lukewarren.dev)",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.2"
+  },
+  "dependencies": {
+    "aws-lambda": "^1.0.7"
+  }
+}
